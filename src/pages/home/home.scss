@@ -1,0 +1,301 @@
+@import '../../assets/_variable.scss';
+
+#app {
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  background-color: #F7FBFF;
+}
+
+.bio {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 3em;
+
+  .left {
+    position: relative;
+    top: 20%;
+    width: 100%;
+    height: 100%;
+    left: 10%;
+
+    &-myName {
+      text-transform: uppercase;
+      color: $primary-100;
+
+      span:first-child {
+        font-size: 86px;
+        display: block;
+        line-height: 60%;
+        font-weight: normal;
+      }
+      span:last-child {
+        font-size: 100px;
+        font-weight: bold;
+      }
+    }
+
+    &-titleJob {
+      position: relative;
+      color: $black !important;
+      font-weight: bold;
+      font-size: em(24px);
+      margin: 0.5em 0;
+
+      &::before {
+        position: relative;
+        content: "";
+        bottom: 0;
+        width: 48px;
+        height: 3px;
+        background-color: $black;
+      }
+    }
+
+    &-jobContent {
+      position: relative;
+      width: 78%;
+      height: max-content;
+      color: $text-color;
+      margin: 1.5em 0;
+      padding: 0 1em;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        background-color: $text-color;
+        opacity: 50%;
+      }
+    }
+
+    &-btnHireMe {
+      position: absolute;
+      bottom: -5px;
+      left: -38%;
+    }
+  }
+  .right {
+    text-align: right;
+    z-index: 1;
+
+    &-title {
+      position: relative;
+      color: $text-color;
+      text-transform: uppercase;
+      margin-right: 50px;
+      padding: 0.5em 0;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        right: -50px;
+        content: "";
+        width: 40px;
+        height: 1.5px;
+        background-color: $text-color;
+      }
+    }
+
+    .info {
+      font-weight: 600;
+    }
+
+    .icons {
+      margin: 0.5em 0;
+      color: $text-color;
+      color: $primary;
+      ion-icon {
+        font-size: em(20px);
+        padding: 0 0.25em;
+        transition: 0.5s;
+
+        &:hover {
+          color: $primary-100;
+        }
+      }
+    }
+  }
+
+  &-myAvt {
+    position: relative;
+    top: 5%;
+    left: 55%;
+    transform: translate(-50%, 0);
+    width: 738px;
+    opacity: 90%;
+    border: 3px solid rgb(228, 228, 228, 0.5);
+    border-radius: 350px;
+    padding: 2em;
+
+    img {
+      width: 100%;
+      border-radius: 350px;
+    }
+  }
+  &-bg {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+}
+
+.more-info {
+  &-exp {
+    h4 {
+      text-align: center;
+      font-size: 6.78em;
+      font-weight: bold;
+      color: $primary;
+    }
+
+    div {
+      position: relative;
+      width: 30%;
+      margin: auto;
+      font-size: em(24px);
+      font-weight: bold;
+    }
+  }
+
+  .card-group {
+    .card-active {
+      background-color: $primary !important;
+      color: $white !important;
+      .link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $white;
+        span {
+          padding: 0 0.2em;
+        }
+      }
+    }
+    .card {
+      height: 220px;
+      color: $primary;
+      background-color: $primary-10;
+      padding: 1em 0.5em;
+      border-radius: 16px;
+      border: none;
+
+      h5 {
+        margin-top: 1em;
+        font-size: em(20px);
+
+        span {
+          padding-top: 0.1em;
+          display: block;
+        }
+      }
+    }
+  }
+
+  &-howCanIHelpYou {
+    h1 {
+      font-weight: 800;
+      font-size: 3em;
+    }
+    div {
+      position: relative;
+      color: $text-color;
+      // margin: 1.5em 0;
+      padding: 0 1em;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        // background-color: $text-color;
+        opacity: 50%;
+      }
+    }
+  }
+}
+
+.education {
+  padding: 2em;
+  background-color: #fff;
+  &-title {
+    font-weight: bold;
+    font-size: em(20px);
+  }
+  h3 {
+    font-weight: bold;
+    align-items: center;
+    font-size: em(28px);
+    margin-bottom: 1.5em;
+    svg {
+      margin-right: 0.5em;
+    }
+  }
+  .item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin: 1em 0;
+    align-items: center;
+    &-schoolInfo,
+    &-graduated-years {
+      color: $text-color;
+    }
+  }
+
+  .skills {
+    .skill-item {
+      display: grid;
+      grid-template-columns: max-content auto max-content;
+      grid-gap: 1em;
+      align-items: center;
+      margin-bottom: 2em;
+
+      .title {
+        margin-bottom: 0;
+      }
+      &_icon {
+        padding: 0.6em;
+        background: #fff7dd;
+        border-radius: 0.5em;
+      }
+    }
+  }
+}
+
+footer {
+  position: relative;
+  .row {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .btnGetMyResume {
+    color: #0086e4;
+    font-size: 1.25em;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    box-shadow: none;
+
+    &:hover {
+      color: #1a3f5a;
+    }
+
+    .btn:focus:not(:focus-visible), &::-moz-focus-inner {
+      border-color: inherit;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+}
+
